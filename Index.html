@@ -1,0 +1,32 @@
+<body>
+
+<h1>AI Scam Detector</h1>
+
+<textarea id="message" rows="6" cols="50"
+placeholder="Paste suspicious message here"></textarea>
+
+<br><br>
+
+<button onclick="analyze()">Detect Scam</button>
+
+<div id="result"></div>
+
+<script>
+async function analyze() {
+    const message = document.getElementById("message").value;
+
+    const response = await fetch("/analyze", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({ text: message })
+    });
+
+    const data = await response.json();
+
+    document.getElementById("result").innerHTML =
+        "Risk Level: " + data.risk + "<br>" +
+        "Reason: " + data.reason.join(", ");
+}
+</script>
+
+</body>
