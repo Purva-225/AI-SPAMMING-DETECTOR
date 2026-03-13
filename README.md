@@ -1,4 +1,4 @@
-# AI-SPAMMING-DETECTOR
+# AI-ScAMMING-DETECTOR
 AI Scam Detector is a simple web-based tool that analyzes suspicious messages and identifies whether they might be scam messages.
 It uses keyword analysis to detect common scam patterns such as requests for bank details, OTP, or urgent verification.
 This project demonstrates how AI-based logic can help identify potential phishing or scam messages quickly.
